@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codepen Editor</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <script src="/script.js"></script>
+
+    <div class="container">
+        <div class="left">
+            <div class="editor">
+                <div class="editortop">
+                    <i class='bx bxl-html5'></i>
+                    <p>HTML</p>
+                    <p class="down"><i class='bx bx-chevron-down' onclick="toggleEditor('htmlcode')"></i></p>
+                </div>
+                <textarea id="htmlcode" onkeyup="run()" class="window"></textarea>
+            </div>
+            <div class="editor">
+                <div class="editortop">
+                    <i class='bx bxl-css3' ></i>
+                    <p>CSS</p>
+                    <p class="down"><i class='bx bx-chevron-down' onclick="toggleEditor('csscode')"></i></p>
+                </div>
+                <textarea id="csscode" onkeyup="run()" class="window"></textarea>
+            </div>
+            <div class="editor">
+                <div class="editortop">
+                    <i class='bx bxl-javascript'></i>
+                    <p>Javascript</p>
+                    <p class="down"><i class='bx bx-chevron-down' onclick="toggleEditor('jscode')"></i></p>
+                </div>
+                <textarea id="jscode" onkeyup="run()" class="window"></textarea>
+            </div>
+        </div>
+        <div class="right">
+            <p>Output</p>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
